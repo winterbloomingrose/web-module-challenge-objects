@@ -160,14 +160,14 @@ Use the getReviewsByRating function below to do the following:
  function getReviewByRating(yourArray, ratingFilter) {
     let ratingFiltered = [];
     for (let i = 0; i < yourArray.length; i++) {
-      if (yourArray.rating === ratingFilter || yourArray.rating === ratingFilter <= ratingFilter + 1 || yourArray.rating === ratingFilter >= ratingFilter -1) {
+      if (Math.floor(yourArray[i].rating) === ratingFilter) {
         ratingFiltered.push(yourArray[i])
       }
     }
   return ratingFiltered
 }
 
-console.log(getReviewByRating(reviews,5))
+console.log(getReviewByRating(reviews,3))
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
