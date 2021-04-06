@@ -56,10 +56,22 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function (chooseyourFighter) {
+    if (chooseyourFighter === "teacher") {
+      return this.price * .75; 
+    }
+    if (chooseyourFighter === "student") {
+      return this.price * .75; 
+    }
+    if (chooseyourFighter === "public") {
+      return this.price * .90; 
+    }
+  }
 }
 
-
+  console.log(burger.discount("teacher"))
+  console.log(burger.discount("student"))
+  console.log(burger.discount("public"))
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -77,9 +89,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
-
-
+  console.log(reviews[5]);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Using the reviews array above do the following: (no function needed) 
@@ -87,7 +97,8 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
-
+reviews.push({name:"Cipta", rating:1, feedback: "Would give 0 stars.This place is awful. They claim their deep fried rats are 'ethically sourced' but I saw the employees just catch them from the NYC sewers and drop them in the fryer ALIVE! Never eating here again."})
+console.log(reviews)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
