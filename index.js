@@ -17,13 +17,13 @@ The function should:
 
 function createMenuItem(itemLabel, price, category){
   let menuItem = { 
-     name: itemName, 
+     name: itemLabel, 
      price: price, 
      category: category
    };
-   return console.log(menuItem);
+   return menuItem;
  }
- 
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
 Test your createMenuItems function by doing the following:
@@ -40,7 +40,7 @@ Test your createMenuItems function by doing the following:
   createMenuItem("Potato Bread",6.51, "cakes");
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
+You're having a lunch special! 25% off for teachäers and students, 10% off for everyone else. Add a method to the 
 burger object below that automatically calculates price depending on the a string received as a parameter. 
 
 Using the burger object below do the following:
@@ -182,10 +182,16 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
+function getLongReviews(yourArray) {
+  for (let i=0; i<yourArray.length; i++) {
+    let longReviews = [];
+    if ((yourArray[i].feedback.split(" ")).length > 15){
+      longReviews.push(yourArray)
+      return "hello" + longReviews;
+    }
   }
-  
+}
+console.log(getLongReviews(reviews));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -203,13 +209,20 @@ Use the carMaker function below to do the following:
   Then we called car1.drive(100)
   It would return 110 because it was created with 10 as the odometer and we added 100 to it with the drive method 
 */
+/*
 
+function carMaker(odoMeter, distance) {
+  drive: function (distance) {
+    if (distance != 0) {
+      return this.odoMeter + distance;
+    }
+    if (distance === 0) {
+      return this.odoMeter
+    }
+    }
+  }
 
-function carMaker(/* code here */) {
-    /* code here */
-    
-}
-
+console.log(carMaker(100, 10)) */
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
